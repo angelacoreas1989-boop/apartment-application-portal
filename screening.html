@@ -8,77 +8,143 @@
 </head>
 <body>
 
-  <header class="site-header">
+<a href="index.html" class="back-link">← Back to Floor Plans</a>
+
+<header class="luxury-hero screening-hero">
+  <section class="hero-inner">
+    <p class="eyebrow">Before You Apply</p>
+    <h1>Screening Requirements</h1>
+    <p class="hero-text">
+      Please review Magnolia Grove’s fees, approval criteria, pet policy, and resident requirements before continuing.
+    </p>
+  </section>
+</header>
+
+<main>
+
+  <section class="intro-section">
     <div>
-      <h1>✦ Screening Requirements ✦</h1>
-      <p>Please review Magnolia Grove’s application fees and rental criteria before continuing.</p>
+      <p class="eyebrow">Selected Apartment Home</p>
+      <h2><span id="unit"></span></h2>
     </div>
-  </header>
+    <p>
+      <strong>Details:</strong> <span id="details"></span><br>
+      <strong>Base Rent:</strong> $<span id="rent"></span>/mo
+    </p>
+  </section>
 
-  <main class="container">
+  <section class="features-section">
+    <p class="eyebrow">Application Fees</p>
+    <h2>Fees due during the application process.</h2>
 
-    <section class="hero-card">
-      <h2>Selected Apartment Home</h2>
-      <p><strong>Floor Plan:</strong> <span id="unit"></span></p>
-      <p><strong>Details:</strong> <span id="details"></span></p>
-      <p><strong>Base Rent:</strong> $<span id="rent"></span>/mo</p>
-    </section>
+    <div class="feature-grid">
+      <div>$100 Application Fee Per Applicant</div>
+      <div>$200 Administrative Fee Per Apartment Home</div>
+      <div>Application fees are non-refundable</div>
+      <div>Admin fee is applied per unit, not per applicant</div>
+    </div>
+  </section>
 
-    <section class="unit-grid">
+  <section class="features-section">
+    <p class="eyebrow">Approval Criteria</p>
+    <h2>Screening standards for all applicants.</h2>
 
-      <div class="unit-card">
-        <h3>Application Fees</h3>
-        <p><strong>$100</strong> per applicant</p>
-        <p><strong>$200</strong> administrative fee per apartment home</p>
-      </div>
+    <div class="feature-grid">
+      <div>650+ Credit Score: Approved with $0 Deposit</div>
+      <div>600–649 Credit Score: Conditional Approval</div>
+      <div>Conditional Approval: Deposit Equal to One Month’s Rent</div>
+      <div>Prior Evictions: Automatic Denial</div>
+      <div>Money Owed to Landlords: Automatic Denial</div>
+      <div>Income Must Be 2.5x Monthly Base Rent</div>
+    </div>
+  </section>
 
-      <div class="unit-card">
-        <h3>Income Requirement</h3>
-        <p>Household income must be at least <strong>2.5x the monthly base rent</strong>.</p>
-      </div>
+  <section class="features-section">
+    <p class="eyebrow">Resident Requirements</p>
+    <h2>Documents and requirements needed before move-in.</h2>
 
-      <div class="unit-card">
-        <h3>Approval Criteria</h3>
-        <ul>
-          <li>650+ credit score: approved with $0 deposit</li>
-          <li>600–649 credit score: approved with one month’s rent deposit</li>
-          <li>Prior evictions: automatic denial</li>
-          <li>Money owed to landlords: automatic denial</li>
-        </ul>
-      </div>
+    <div class="feature-grid">
+      <div>Government-Issued ID Required</div>
+      <div>Proof of Income Required</div>
+      <div>Renters Insurance Required</div>
+      <div>Utilities Must Be Transferred Before Move-In</div>
+      <div>All Leaseholders Must Complete Screening</div>
+      <div>Additional Documents May Be Requested</div>
+    </div>
+  </section>
 
-      <div class="unit-card">
-        <h3>Screening Authorization</h3>
-        <p>Application review may include credit, background, rental history, income, and employment verification.</p>
-      </div>
+  <section class="features-section">
+    <p class="eyebrow">Pet Policy</p>
+    <h2>Luxury pet-friendly living with clear community standards.</h2>
 
-    </section>
+    <div class="feature-grid">
+      <div>Maximum of 3 Pets Per Apartment Home</div>
+      <div>No Breed Restrictions</div>
+      <div>No Weight Limits</div>
+      <div>No Monthly Pet Rent</div>
+      <div>$400 Non-Refundable Fee for First Pet</div>
+      <div>$250 Non-Refundable Fee for Second Pet</div>
+      <div>$250 Non-Refundable Fee for Third Pet</div>
+      <div>Pets Must Be Current on Vaccines</div>
+      <div>Pet Profile Required Before Move-In</div>
+      <div>Pets Must Remain Leashed Except Inside the Bark Park</div>
+      <div>Residents Must Pick Up After Pets</div>
+      <div>Pet Waste Violations May Result in Fines</div>
+    </div>
+  </section>
 
-    <section class="hero-card">
-      <label class="checkbox-label">
-        <input type="checkbox" required>
-        I have reviewed and understand the screening requirements, fees, and rental criteria.
-      </label>
+  <section class="features-section">
+    <p class="eyebrow">Screening Authorization</p>
+    <h2>By continuing, applicants authorize standard screening review.</h2>
 
-      <a id="continueBtn" class="btn">Continue to Application</a>
-    </section>
+    <div class="feature-grid">
+      <div>Credit Screening</div>
+      <div>Background Screening</div>
+      <div>Rental History Verification</div>
+      <div>Income Verification</div>
+      <div>Employment Verification</div>
+      <div>Landlord Balance Review</div>
+    </div>
+  </section>
 
-  </main>
+  <section class="footer">
+    <p class="eyebrow">Applicant Acknowledgement</p>
+    <h2>Ready to continue?</h2>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
+    <label class="checkbox-label">
+      <input type="checkbox" id="acknowledge">
+      I have reviewed and understand the screening requirements, fees, pet policy, and resident requirements.
+    </label>
 
-    const unit = params.get("unit");
-    const rent = params.get("rent");
-    const details = params.get("details");
+    <a id="continueBtn" class="primary-btn full disabled-link">Begin Application</a>
+  </section>
 
-    document.getElementById("unit").textContent = unit;
-    document.getElementById("rent").textContent = rent;
-    document.getElementById("details").textContent = details;
+</main>
 
-    document.getElementById("continueBtn").href =
-      `application.html?unit=${unit}&rent=${rent}&details=${details}`;
-  </script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const unit = params.get("unit");
+  const rent = params.get("rent");
+  const details = params.get("details");
+
+  document.getElementById("unit").textContent = unit || "Selected Floor Plan";
+  document.getElementById("rent").textContent = rent || "0";
+  document.getElementById("details").textContent = details || "Apartment details";
+
+  const continueBtn = document.getElementById("continueBtn");
+  const acknowledge = document.getElementById("acknowledge");
+
+  continueBtn.href = `application.html?unit=${unit}&rent=${rent}&details=${details}`;
+
+  acknowledge.addEventListener("change", function () {
+    if (acknowledge.checked) {
+      continueBtn.classList.remove("disabled-link");
+    } else {
+      continueBtn.classList.add("disabled-link");
+    }
+  });
+</script>
 
 </body>
 </html>
