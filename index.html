@@ -3,74 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apartment Application</title>
+  <title>Apartment Application Portal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Apartment Leasing Application</h1>
-    <p>Complete your application below</p>
+  <header class="site-header">
+    <div>
+      <h1>✦ Apartment Application Portal ✦</h1>
+      <p>Select an available apartment home to begin your application.</p>
+    </div>
   </header>
 
-  <main class="application-container">
-    <form class="application-form">
+  <main class="container">
 
-      <h2>Personal Information</h2>
+    <section class="hero-card">
+      <h2>Available Apartment Homes</h2>
+      <p>
+        Review available units below and choose the apartment home you would like to apply for.
+      </p>
+    </section>
 
-      <label>Full Name</label>
-      <input type="text" placeholder="Enter your full name" required>
+    <section class="unit-grid">
 
-      <label>Email Address</label>
-      <input type="email" placeholder="Enter your email" required>
+      <div class="unit-card">
+        <div class="unit-top">
+          <h3>A1</h3>
+          <span>Available Now</span>
+        </div>
+        <p class="unit-type">1 Bed • 1 Bath</p>
+        <p class="rent">$1,425/mo</p>
+        <ul>
+          <li>740 sq. ft.</li>
+          <li>Garden view</li>
+          <li>Washer/Dryer included</li>
+        </ul>
+        <a class="btn" href="screening.html?unit=A1&rent=1425&details=1%20Bed%20%E2%80%A2%201%20Bath">
+          Apply Now
+        </a>
+      </div>
 
-      <label>Phone Number</label>
-      <input type="tel" placeholder="Enter your phone number" required>
+      <div class="unit-card featured">
+        <div class="unit-top">
+          <h3>B2</h3>
+          <span>Most Popular</span>
+        </div>
+        <p class="unit-type">2 Bed • 2 Bath</p>
+        <p class="rent">$1,850/mo</p>
+        <ul>
+          <li>1,080 sq. ft.</li>
+          <li>Pool view</li>
+          <li>Updated kitchen</li>
+        </ul>
+        <a class="btn" href="screening.html?unit=B2&rent=1850&details=2%20Bed%20%E2%80%A2%202%20Bath">
+          Apply Now
+        </a>
+      </div>
 
-      <label>Date of Birth</label>
-      <input type="date" required>
+      <div class="unit-card">
+        <div class="unit-top">
+          <h3>C1</h3>
+          <span>Available Aug 1</span>
+        </div>
+        <p class="unit-type">3 Bed • 2 Bath</p>
+        <p class="rent">$2,250/mo</p>
+        <ul>
+          <li>1,320 sq. ft.</li>
+          <li>Top floor</li>
+          <li>Private balcony</li>
+        </ul>
+        <a class="btn" href="screening.html?unit=C1&rent=2250&details=3%20Bed%20%E2%80%A2%202%20Bath">
+          Apply Now
+        </a>
+      </div>
 
-      <h2>Apartment Information</h2>
+    </section>
 
-      <label>Desired Move-In Date</label>
-      <input type="date" required>
-
-      <label>Apartment Type</label>
-      <select required>
-        <option value="">Select apartment type</option>
-        <option>1 Bedroom</option>
-        <option>2 Bedroom</option>
-        <option>3 Bedroom</option>
-      </select>
-
-      <label>Monthly Income</label>
-      <input type="number" placeholder="Enter monthly income" required>
-
-      <h2>Employment Information</h2>
-
-      <label>Employer Name</label>
-      <input type="text" placeholder="Enter employer name">
-
-      <label>Job Title</label>
-      <input type="text" placeholder="Enter job title">
-
-      <label>Employer Phone</label>
-      <input type="tel" placeholder="Enter employer phone">
-
-      <h2>Rental History</h2>
-
-      <label>Current Address</label>
-      <input type="text" placeholder="Enter current address">
-
-      <label>Current Landlord Name</label>
-      <input type="text" placeholder="Enter landlord name">
-
-      <label>Landlord Phone</label>
-      <input type="tel" placeholder="Enter landlord phone">
-
-      <button type="submit">Submit Application</button>
-
-    </form>
   </main>
 
 </body>
