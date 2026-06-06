@@ -16,8 +16,7 @@ body {
 }
 
 .luxury-hero {
-  min-height: 92vh;
-  padding: 32px 6%;
+  padding: 32px 6% 60px;
   background:
     radial-gradient(circle at top left, rgba(236, 72, 153, 0.16), transparent 35%),
     linear-gradient(135deg, #fff4f8, #fffaf7 45%, #f8e7df);
@@ -26,14 +25,14 @@ body {
 
 .navbar {
   max-width: 1180px;
-  margin: 0 auto 90px;
+  margin: 0 auto 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .navbar h2 {
-  color: #9f5b6f;
+  color: #FF7CC4;
   letter-spacing: 1px;
   font-size: 1.5rem;
 }
@@ -48,14 +47,14 @@ body {
 }
 
 .navbar a:hover {
-  color: #c94f86;
+  color: #FF7CC4;
 }
 
 .hero-inner {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
-  padding: 70px 20px;
+  padding: 45px 20px;
   border: 1px solid rgba(188, 134, 99, 0.25);
   border-radius: 36px;
   background: rgba(255, 255, 255, 0.55);
@@ -63,7 +62,7 @@ body {
 }
 
 .eyebrow {
-  color: #b76e79;
+  color: #FF7CC4;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: 0.78rem;
@@ -73,8 +72,8 @@ body {
 }
 
 .hero-inner h1 {
-  color: #8f4862;
-  font-size: clamp(2.6rem, 7vw, 5rem);
+  color: #FF7CC4;
+  font-size: clamp(3rem, 8vw, 6rem);
   line-height: 1.05;
   margin-bottom: 24px;
 }
@@ -108,19 +107,19 @@ button {
 }
 
 .primary-btn {
-  background: #c94f86;
+  background: #FF7CC4;
   color: white;
   box-shadow: 0 14px 28px rgba(201, 79, 134, 0.22);
 }
 
 .secondary-btn {
   background: white;
-  color: #9f5b6f;
+  color: #FF7CC4;
   border: 1px solid rgba(159, 91, 111, 0.25);
 }
 
 .primary-btn:hover {
-  background: #a63f6f;
+  background: #E85DAF;
 }
 
 .secondary-btn:hover {
@@ -162,7 +161,7 @@ main {
 .featured-section h2,
 .availability-section h2,
 .footer h2 {
-  color: #8f4862;
+  color: #FF7CC4;
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1.15;
   margin-bottom: 18px;
@@ -196,7 +195,7 @@ main {
 }
 
 .lifestyle-card h3 {
-  color: #8f4862;
+  color: #FF7CC4;
   font-size: 1.5rem;
   margin: 12px 0;
 }
@@ -241,7 +240,7 @@ textarea {
 }
 
 .floorplan-section h2 {
-  color: #8f4862;
+  color: #FF7CC4;
   font-size: 2.2rem;
   margin-bottom: 24px;
 }
@@ -287,13 +286,13 @@ textarea {
 }
 
 .unit-top h3 {
-  color: #8f4862;
+  color: #FF7CC4;
   font-size: 1.5rem;
 }
 
 .unit-top span {
   background: #fff4f8;
-  color: #a63f6f;
+  color: #E85DAF;
   border: 1px solid rgba(201, 79, 134, 0.2);
   padding: 6px 12px;
   border-radius: 999px;
@@ -336,7 +335,7 @@ textarea {
 }
 
 .footer h3 {
-  color: #8f4862;
+  color: #FF7CC4;
   margin-bottom: 10px;
 }
 
@@ -355,7 +354,7 @@ textarea {
 .back-link {
   display: inline-block;
   margin: 20px 0 0 20px;
-  color: #9f5b6f;
+  color: #FF7CC4;
   text-decoration: none;
   font-weight: 700;
   font-family: Arial, sans-serif;
@@ -392,7 +391,7 @@ textarea {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: #c94f86;
+  background: #FF7CC4;
   color: white;
   text-decoration: none;
   width: 50px;
@@ -408,7 +407,7 @@ textarea {
 }
 
 .back-top:hover {
-  background: #a63f6f;
+  background: #E85DAF;
   transform: translateY(-3px);
 }
 .screening-hero {
@@ -487,7 +486,7 @@ textarea {
   width: auto;
   margin-top: 20px;
   background: white;
-  color: #9f5b6f !important;
+  color: #FF7CC4 !important;
   border: 1px solid rgba(159,91,111,.25);
 }
 
@@ -497,4 +496,15 @@ textarea {
 
 .pet-policy-grid {
   margin-top: 30px;
+}
+.remove-action {
+  width: auto;
+  margin-top: 25px;
+  background: #fff4f8;
+  color: #E85DAF !important;
+  border: 1px solid rgba(201, 79, 134, 0.25);
+}
+
+.remove-action:hover {
+  background: #fce7f3;
 }
