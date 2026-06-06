@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apartment Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Apartment Leasing Application</h1>
+    <p>Complete your application below</p>
+  </header>
+
+  <main class="application-container">
+    <form class="application-form">
+
+      <h2>Personal Information</h2>
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" placeholder="Enter your phone number" required>
+
+      <label>Date of Birth</label>
+      <input type="date" required>
+
+      <h2>Apartment Information</h2>
+
+      <label>Desired Move-In Date</label>
+      <input type="date" required>
+
+      <label>Apartment Type</label>
+      <select required>
+        <option value="">Select apartment type</option>
+        <option>1 Bedroom</option>
+        <option>2 Bedroom</option>
+        <option>3 Bedroom</option>
+      </select>
+
+      <label>Monthly Income</label>
+      <input type="number" placeholder="Enter monthly income" required>
+
+      <h2>Employment Information</h2>
+
+      <label>Employer Name</label>
+      <input type="text" placeholder="Enter employer name">
+
+      <label>Job Title</label>
+      <input type="text" placeholder="Enter job title">
+
+      <label>Employer Phone</label>
+      <input type="tel" placeholder="Enter employer phone">
+
+      <h2>Rental History</h2>
+
+      <label>Current Address</label>
+      <input type="text" placeholder="Enter current address">
+
+      <label>Current Landlord Name</label>
+      <input type="text" placeholder="Enter landlord name">
+
+      <label>Landlord Phone</label>
+      <input type="tel" placeholder="Enter landlord phone">
+
+      <button type="submit">Submit Application</button>
+
+    </form>
+  </main>
+
+</body>
+</html>
