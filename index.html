@@ -4,30 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Magnolia Grove Apartments</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <header class="luxury-hero" id="home">
   <nav class="navbar">
-    <h2>Magnolia Grove</h2>
-    <div>
-      <a href="#lifestyle">Lifestyle</a>
+    <div class="brand">
+      <h2>Magnolia Grove</h2>
+      <span>A P A R T M E N T S</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#lifestyle">Amenities</a>
       <a href="#availability">Availability</a>
       <a href="#contact">Contact</a>
+      <a href="#tour" class="nav-button">Schedule a Tour</a>
     </div>
   </nav>
 
   <section class="hero-inner">
     <p class="eyebrow">Luxury Apartment Living in Atlanta</p>
-    <h1>✦ Magnolia Grove Apartments ✦</h1>
+
+    <h1 class="community-name">
+      Magnolia Grove
+      <span>A P A R T M E N T S</span>
+    </h1>
+
     <p class="hero-text">
       Thoughtfully crafted apartment homes, resort-inspired amenities,
       and elevated living designed around comfort, style, and ease.
     </p>
 
     <div class="hero-actions">
-      <a href="#contact" class="primary-btn">Schedule a Tour</a>
+      <a href="#tour" class="primary-btn">Schedule a Tour</a>
       <a href="#availability" class="secondary-btn">View Availability</a>
     </div>
   </section>
@@ -40,6 +57,7 @@
       <p class="eyebrow">Welcome Home</p>
       <h2>Where comfort meets quiet luxury.</h2>
     </div>
+
     <p>
       Magnolia Grove offers studio, one-bedroom, two-bedroom, and three-bedroom
       apartment homes with polished finishes, thoughtful layouts, and a community
@@ -78,22 +96,22 @@
     </div>
   </section>
 
-<section class="features-section">
-  <p class="eyebrow">Pet Friendly Living</p>
-  <h2>Your pets are family.</h2>
+  <section class="features-section">
+    <p class="eyebrow">Pet Friendly Living</p>
+    <h2>Your pets are family.</h2>
 
-  <div class="feature-grid">
-    <div>3 Pets Maximum</div>
-    <div>No Breed Restrictions</div>
-    <div>No Weight Limits</div>
-    <div>No Monthly Pet Rent</div>
-    <div>Pet Spa</div>
-    <div>Bark Park</div>
-    <div>Vaccines Required</div>
-    <div>Pet Profiles Required</div>
-  </div>
-</section>
-  
+    <div class="feature-grid">
+      <div>3 Pets Maximum</div>
+      <div>No Breed Restrictions</div>
+      <div>No Weight Limits</div>
+      <div>No Monthly Pet Rent</div>
+      <div>Pet Spa</div>
+      <div>Bark Park</div>
+      <div>Vaccines Required</div>
+      <div>Pet Profiles Required</div>
+    </div>
+  </section>
+
   <section class="features-section">
     <p class="eyebrow">Apartment Features</p>
     <h2>Designed with elevated everyday living in mind.</h2>
@@ -193,6 +211,7 @@
   <section class="floorplan-section">
     <h2>Studios</h2>
     <div class="unit-grid">
+
       <div class="unit-card" data-bedrooms="studio" data-rent="1295" data-available="2026-06-01">
         <div class="unit-image lily"></div>
         <div class="unit-top">
@@ -224,12 +243,14 @@
         </ul>
         <a class="primary-btn full" href="screening.html?unit=The%20Tulip&rent=1350&details=Studio%20%E2%80%A2%20610%20sq.%20ft.">Apply</a>
       </div>
+
     </div>
   </section>
 
   <section class="floorplan-section">
     <h2>1 Bedroom</h2>
     <div class="unit-grid">
+
       <div class="unit-card" data-bedrooms="1" data-rent="1425" data-available="2026-06-01">
         <div class="unit-image rose"></div>
         <div class="unit-top">
@@ -277,12 +298,14 @@
         </ul>
         <a class="primary-btn full" href="screening.html?unit=The%20Sunflower&rent=1625&details=1%20Bed%20%E2%80%A2%201%20Bath%20%E2%80%A2%20875%20sq.%20ft.">Apply</a>
       </div>
+
     </div>
   </section>
 
   <section class="floorplan-section">
     <h2>2 Bedrooms</h2>
     <div class="unit-grid">
+
       <div class="unit-card featured" data-bedrooms="2" data-rent="1850" data-available="2026-06-01">
         <div class="unit-image orchid"></div>
         <div class="unit-top">
@@ -314,12 +337,14 @@
         </ul>
         <a class="primary-btn full" href="screening.html?unit=The%20Daisy&rent=1950&details=2%20Bed%20%E2%80%A2%202%20Bath%20%E2%80%A2%201140%20sq.%20ft.">Apply</a>
       </div>
+
     </div>
   </section>
 
   <section class="floorplan-section">
     <h2>3 Bedrooms</h2>
     <div class="unit-grid">
+
       <div class="unit-card" data-bedrooms="3" data-rent="2250" data-available="2026-08-15">
         <div class="unit-image magnolia"></div>
         <div class="unit-top">
@@ -335,7 +360,62 @@
         </ul>
         <a class="primary-btn full" href="screening.html?unit=The%20Magnolia&rent=2250&details=3%20Bed%20%E2%80%A2%202%20Bath%20%E2%80%A2%201320%20sq.%20ft.">Apply</a>
       </div>
+
     </div>
+  </section>
+
+  <section class="tour-section" id="tour">
+    <p class="eyebrow">Schedule a Tour</p>
+    <h2>See Magnolia Grove in person.</h2>
+
+    <form class="tour-form">
+      <div class="form-grid">
+        <div>
+          <label>Full Name</label>
+          <input type="text" required>
+        </div>
+
+        <div>
+          <label>Email Address</label>
+          <input type="email" required>
+        </div>
+
+        <div>
+          <label>Phone Number</label>
+          <input type="tel" required>
+        </div>
+
+        <div>
+          <label>Preferred Tour Date</label>
+          <input type="date" required>
+        </div>
+
+        <div>
+          <label>Preferred Tour Time</label>
+          <select required>
+            <option value="">Select a Time</option>
+            <option>9:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>1:00 PM</option>
+            <option>2:00 PM</option>
+            <option>3:00 PM</option>
+            <option>4:00 PM</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Tour Type</label>
+          <select required>
+            <option value="">Select Tour Type</option>
+            <option>In-Person Tour</option>
+            <option>Virtual Tour</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="primary-btn full">Submit Tour Request</button>
+    </form>
   </section>
 
   <footer class="footer" id="contact">
@@ -369,11 +449,13 @@
 
 </main>
 
+<a href="#home" class="back-top">↑</a>
+
 <script>
   const bedroomFilter = document.getElementById("bedroomFilter");
   const budgetFilter = document.getElementById("budgetFilter");
   const moveInFilter = document.getElementById("moveInFilter");
-  const units = document.querySelectorAll(".unit-card");
+  const units = document.querySelectorAll(".floorplan-section .unit-card");
 
   function filterUnits() {
     const bedroomValue = bedroomFilter.value;
@@ -398,9 +480,5 @@
   moveInFilter.addEventListener("change", filterUnits);
 </script>
 
-<a href="#home" class="back-top">
-  ↑
-</a>
-  
 </body>
 </html>
