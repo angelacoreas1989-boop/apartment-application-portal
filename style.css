@@ -449,3 +449,52 @@ textarea {
   margin-bottom: 35px;
   box-shadow: 0 15px 40px rgba(159,91,111,.06);
 }
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.form-grid label {
+  display: block;
+  margin-bottom: 8px;
+  color: #5f5558;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+}
+
+.application-form .features-section {
+  background: white;
+  padding: 35px;
+  border-radius: 28px;
+  border: 1px solid rgba(188,134,99,.15);
+  margin-bottom: 35px;
+  box-shadow: 0 15px 40px rgba(159,91,111,.06);
+}
+
+.entry-group {
+  margin-bottom: 20px;
+}
+
+.added-entry {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(188,134,99,.2);
+}
+
+.secondary-action {
+  width: auto;
+  margin-top: 20px;
+  background: white;
+  color: #9f5b6f !important;
+  border: 1px solid rgba(159,91,111,.25);
+}
+
+.secondary-action:hover {
+  background: #fff4f8;
+}
+
+.pet-policy-grid {
+  margin-top: 30px;
+}
