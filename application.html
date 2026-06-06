@@ -1,131 +1,496 @@
-<section class="hero-card">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Application | Magnolia Grove</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <h2>Apartment Information</h2>
+<a href="screening.html" class="back-link">← Back to Screening</a>
 
-  <p><strong>Floor Plan:</strong> <span id="unit"></span></p>
-  <p><strong>Details:</strong> <span id="details"></span></p>
-  <p><strong>Base Rent:</strong> $<span id="rent"></span>/month</p>
+<header class="luxury-hero screening-hero">
+  <section class="hero-inner">
+    <p class="eyebrow">Magnolia Grove Apartments</p>
+    <h1>Rental Application</h1>
+    <p class="hero-text">
+      Complete the application below. Please provide accurate information and upload all required documents.
+    </p>
+  </section>
+</header>
 
-</section>
+<main>
 
-<section class="hero-card">
+  <form class="application-form" onsubmit="showThankYou(event)">
 
-  <h2>Applicant Information</h2>
+    <section class="intro-section">
+      <div>
+        <p class="eyebrow">Selected Apartment Home</p>
+        <h2><span id="unit"></span></h2>
+      </div>
+      <p>
+        <strong>Details:</strong> <span id="details"></span><br>
+        <strong>Base Rent:</strong> $<span id="rent"></span>/mo
+      </p>
+    </section>
 
-  <label>First Name</label>
-  <input type="text" required>
+    <section class="features-section">
+      <p class="eyebrow">Applicant Information</p>
+      <h2>Tell us about yourself.</h2>
 
-  <label>Middle Name</label>
-  <input type="text">
+      <div class="form-grid">
+        <div>
+          <label>First Name</label>
+          <input type="text" required>
+        </div>
 
-  <label>Last Name</label>
-  <input type="text" required>
+        <div>
+          <label>Middle Name</label>
+          <input type="text">
+        </div>
 
-  <label>Date of Birth</label>
-  <input type="date" required>
+        <div>
+          <label>Last Name</label>
+          <input type="text" required>
+        </div>
 
-  <label>Email Address</label>
-  <input type="email" required>
+        <div>
+          <label>Date of Birth</label>
+          <input type="date" required>
+        </div>
 
-  <label>Phone Number</label>
-  <input type="tel" required>
+        <div>
+          <label>Email Address</label>
+          <input type="email" required>
+        </div>
 
-</section>
+        <div>
+          <label>Phone Number</label>
+          <input type="tel" required>
+        </div>
+      </div>
+    </section>
 
-<section class="hero-card">
+    <section class="features-section">
+      <p class="eyebrow">Identification</p>
+      <h2>Identity verification information.</h2>
 
-  <h2>Identification Information</h2>
+      <div class="form-grid">
+        <div>
+          <label>Social Security Number</label>
+          <input type="text" placeholder="XXX-XX-XXXX">
+        </div>
 
-  <label>Social Security Number</label>
-  <input type="text" placeholder="XXX-XX-XXXX">
+        <div>
+          <label>Tax Identification Number</label>
+          <input type="text">
+        </div>
 
-  <label>Tax Identification Number</label>
-  <input type="text">
+        <div>
+          <label>Government-Issued ID Type</label>
+          <select required>
+            <option value="">Select ID Type</option>
+            <option>Driver's License</option>
+            <option>State ID</option>
+            <option>Passport</option>
+            <option>Military ID</option>
+            <option>Permanent Resident Card</option>
+          </select>
+        </div>
 
-  <label class="checkbox-label">
-    <input type="checkbox">
-    I do not have a Social Security Number or Tax ID.
-  </label>
+        <div>
+          <label>Upload Government-Issued ID</label>
+          <input type="file" required>
+        </div>
+      </div>
 
-  <label>Government Issued ID Type</label>
-  <select>
-    <option>Select ID Type</option>
-    <option>Driver's License</option>
-    <option>State Identification Card</option>
-    <option>Passport</option>
-    <option>Military ID</option>
-    <option>Permanent Resident Card</option>
-  </select>
+      <label class="checkbox-label">
+        <input type="checkbox">
+        I do not have a Social Security Number or Tax Identification Number.
+      </label>
+    </section>
 
-  <label>Upload Government Issued ID</label>
-  <input type="file">
+    <section class="features-section">
+      <p class="eyebrow">Current Address</p>
+      <h2>Where do you currently live?</h2>
 
-</section>
+      <div class="form-grid">
+        <div>
+          <label>Street Address</label>
+          <input type="text" required>
+        </div>
 
-<section class="hero-card">
+        <div>
+          <label>Unit Number</label>
+          <input type="text" placeholder="If applicable">
+        </div>
 
-  <h2>Current Address</h2>
+        <div>
+          <label>City</label>
+          <input type="text" required>
+        </div>
 
-  <label>Street Address</label>
-  <input type="text" required>
+        <div>
+          <label>State</label>
+          <input type="text" required>
+        </div>
 
-  <label>Unit Number</label>
-  <input type="text">
+        <div>
+          <label>ZIP Code</label>
+          <input type="text" required>
+        </div>
 
-  <label>City</label>
-  <input type="text" required>
+        <div>
+          <label>How long have you lived here?</label>
+          <input type="text" placeholder="Example: 2 years">
+        </div>
+      </div>
+    </section>
 
-  <label>State</label>
-  <input type="text" required>
+    <section class="features-section">
+      <p class="eyebrow">Employment Information</p>
+      <h2>Employment and income details.</h2>
 
-  <label>ZIP Code</label>
-  <input type="text" required>
+      <div class="form-grid">
+        <div>
+          <label>Company Name</label>
+          <input type="text" required>
+        </div>
 
-</section>
+        <div>
+          <label>Employer Name</label>
+          <input type="text" required>
+        </div>
 
-<section class="hero-card">
+        <div>
+          <label>Employer Title</label>
+          <input type="text">
+        </div>
 
-  <h2>Employment Information</h2>
+        <div>
+          <label>Employer Phone Number</label>
+          <input type="tel" required>
+        </div>
 
-  <label>Company Name</label>
-  <input type="text" required>
+        <div>
+          <label>Position / Job Title</label>
+          <input type="text" required>
+        </div>
 
-  <label>Employer Name</label>
-  <input type="text" required>
+        <div>
+          <label>Monthly Gross Income</label>
+          <input type="number" required>
+        </div>
+      </div>
+    </section>
 
-  <label>Employer Title</label>
-  <input type="text">
+    <section class="features-section">
+      <p class="eyebrow">Income Verification</p>
+      <h2>Upload proof of income.</h2>
 
-  <label>Employer Phone Number</label>
-  <input type="tel" required>
+      <div class="form-grid">
+        <div>
+          <label>Verification Method</label>
+          <select required>
+            <option value="">Select Verification Method</option>
+            <option>Pay Stubs</option>
+            <option>Bank Statements</option>
+            <option>Offer Letter</option>
+            <option>Employment Verification Letter</option>
+            <option>Tax Returns</option>
+            <option>Self-Employment Documentation</option>
+            <option>Retirement Income Documentation</option>
+            <option>Other Supporting Documentation</option>
+          </select>
+        </div>
 
-  <label>Monthly Gross Income</label>
-  <input type="number" required>
+        <div>
+          <label>Upload Proof of Income</label>
+          <input type="file" multiple required>
+        </div>
 
-</section>
+        <div>
+          <label>Upload Additional Supporting Documents</label>
+          <input type="file" multiple>
+        </div>
 
-<section class="hero-card">
+        <div>
+          <label>Additional Income Notes</label>
+          <textarea rows="4" placeholder="Add any notes about your income documents."></textarea>
+        </div>
+      </div>
+    </section>
 
-  <h2>Income Verification</h2>
+    <section class="features-section">
+      <p class="eyebrow">Rental History</p>
+      <h2>Tell us about your rental history.</h2>
+      
+      <div class="form-grid">
+        <div>
+          <label>Current Property Name</label>
+          <input type="text">
+        </div>
 
-  <label>Verification Method</label>
-  <select required>
-    <option value="">Select Verification Method</option>
-    <option>Pay Stubs</option>
-    <option>Bank Statements</option>
-    <option>Offer Letter</option>
-    <option>Employer Verification Letter</option>
-    <option>Bank Verification Link</option>
-    <option>Employer Verification Link</option>
-  </select>
+        <div>
+          <label>Landlord / Management Company</label>
+          <input type="text">
+        </div>
 
-  <label>Upload Proof of Income</label>
-  <input type="file" multiple>
+        <div>
+          <label>Landlord Phone Number</label>
+          <input type="tel">
+        </div>
 
-  <label>Bank Verification Link</label>
-  <input type="url" placeholder="https://">
+        <div>
+          <label>Monthly Rent</label>
+          <input type="number">
+        </div>
 
-  <label>Employer Verification Link</label>
-  <input type="url" placeholder="https://">
+        <div>
+          <label>Move-In Date</label>
+          <input type="date">
+        </div>
 
-</section>
+        <div>
+          <label>Reason for Moving</label>
+          <input type="text">
+        </div>
+      </div>
+    </section>
+
+       <section class="features-section">
+      <p class="eyebrow">Co-Applicant Information</p>
+      <h2>Will another adult be applying with you?</h2>
+
+      <label class="checkbox-label">
+        <input type="checkbox">
+        I will have a co-applicant.
+      </label>
+
+      <div class="form-grid">
+        <div>
+          <label>Co-Applicant First Name</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Co-Applicant Last Name</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Co-Applicant Phone Number</label>
+          <input type="tel">
+        </div>
+
+        <div>
+          <label>Co-Applicant Email</label>
+          <input type="email">
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <p class="eyebrow">Vehicle Information</p>
+      <h2>Vehicles to be registered at Magnolia Grove.</h2>
+
+      <div class="form-grid">
+        <div>
+          <label>Make</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Model</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Color</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>License Plate Number</label>
+          <input type="text">
+        </div>
+      </div>
+
+      <button type="button">+ Add Another Vehicle</button>
+    </section>
+
+    <section class="features-section">
+      <p class="eyebrow">Pet Information</p>
+      <h2>Tell us about your pets.</h2>
+
+      <label class="checkbox-label">
+        <input type="checkbox">
+        I will have pets residing in the apartment.
+      </label>
+
+      <div class="form-grid">
+
+        <div>
+          <label>Pet Name</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Pet Type</label>
+          <select>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Pet Breed</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Pet Age</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Upload Pet Photo</label>
+          <input type="file">
+        </div>
+
+        <div>
+          <label>Upload Vaccine Records</label>
+          <input type="file">
+        </div>
+
+        <div>
+          <label>Upload ESA Documentation (If Applicable)</label>
+          <input type="file">
+        </div>
+
+      </div>
+
+      <button type="button">+ Add Another Pet</button>
+
+      <br><br>
+
+      <div class="feature-grid">
+        <div>Maximum 3 Pets Per Apartment Home</div>
+        <div>No Breed Restrictions</div>
+        <div>No Weight Restrictions</div>
+        <div>No Monthly Pet Rent</div>
+        <div>$400 First Pet Fee</div>
+        <div>$250 Second Pet Fee</div>
+        <div>$250 Third Pet Fee</div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <p class="eyebrow">Renters Insurance</p>
+      <h2>Required Prior To Move-In</h2>
+
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        I understand renters insurance is required before move-in.
+      </label>
+    </section>
+
+    <section class="features-section">
+      <p class="eyebrow">Applicant Certifications</p>
+      <h2>Please review before submitting.</h2>
+
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        I authorize Magnolia Grove to conduct credit, background, rental history, employment, and income verification.
+      </label>
+
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        I certify that all information provided is accurate and complete.
+      </label>
+
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        I understand that application fees are non-refundable.
+      </label>
+
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        I understand that prior evictions or landlord balances may result in denial.
+      </label>
+    </section>
+
+    <section class="features-section">
+      <p class="eyebrow">Electronic Signature</p>
+      <h2>Applicant Signature</h2>
+
+      <div class="form-grid">
+        <div>
+          <label>Full Legal Name</label>
+          <input type="text" required>
+        </div>
+
+        <div>
+          <label>Date</label>
+          <input type="date" required>
+        </div>
+      </div>
+    </section>
+
+    <button type="submit" class="primary-btn full">
+      Submit Application
+    </button>
+
+  </form>
+
+  <section id="thankYouMessage" class="footer hidden">
+    <p class="eyebrow">Application Submitted</p>
+    <h2>Thank You For Applying!</h2>
+
+    <p>
+      Your application has been successfully submitted.
+      A member of the Magnolia Grove leasing team will review your information
+      and contact you within 24–48 hours.
+    </p>
+
+    <br>
+
+    <p>
+      If you have any questions before then, please contact our leasing office
+      at (404) 555-2478.
+    </p>
+  </section>
+
+</main>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  document.getElementById("unit").textContent =
+    params.get("unit") || "Selected Apartment";
+
+  document.getElementById("rent").textContent =
+    params.get("rent") || "0";
+
+  document.getElementById("details").textContent =
+    params.get("details") || "";
+
+  function showThankYou(event) {
+    event.preventDefault();
+
+    document.querySelector(".application-form").style.display = "none";
+
+    document.getElementById("thankYouMessage")
+      .classList.remove("hidden");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+</body>
+</html>
