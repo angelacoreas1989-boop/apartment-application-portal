@@ -8,62 +8,103 @@
 </head>
 <body>
 
-  <header class="site-header">
+<header class="site-header" id="home">
+  <nav class="navbar">
+    <h2>Magnolia Grove</h2>
     <div>
-      <h1>✦ Magnolia Grove Apartments ✦</h1>
-      <p>Luxury apartment living designed with comfort, style, and convenience in mind.</p>
-
-      <div class="contact-info">
-        <p>📍 245 Magnolia Grove Parkway, Atlanta, GA 30328</p>
-        <p>📞 (404) 555-2478</p>
-        <p>✉ leasing@magnoliagroveapts.com</p>
-      </div>
+      <a href="#amenities">Amenities</a>
+      <a href="#availability">Availability</a>
+      <a href="#contact">Contact Us</a>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
+  <div class="hero-content">
+    <h1>✦ Magnolia Grove Apartments ✦</h1>
+    <p>
+      A luxury apartment community offering refined interiors, resort-style amenities,
+      and a peaceful residential experience in the heart of Atlanta.
+    </p>
 
-    <section class="hero-card">
-      <h2>Find Your Next Home</h2>
-      <p>
-        Explore beautifully designed apartment homes at Magnolia Grove.
-        Choose your preferred floor plan below to begin your application.
-      </p>
-    </section>
+    <div class="contact-info">
+      <p>📍 245 Magnolia Grove Parkway, Atlanta, GA 30328</p>
+      <p>📞 Call: (404) 555-2478</p>
+      <p>💬 Text: (404) 555-0198</p>
+      <p>✉ leasing@magnoliagroveapts.com</p>
+    </div>
+  </div>
+</header>
 
-    <section class="hero-card">
-      <h2>Resort-Inspired Amenities</h2>
-      <p>
-        Magnolia Grove blends luxury apartment living with elevated community spaces
-        designed for comfort, convenience, and everyday relaxation.
-      </p>
-    </section>
+<main class="container">
 
-    <section class="amenities-section">
-      <div class="amenity-card">✦ Resort-Style Pool</div>
-      <div class="amenity-card">✦ Private Cabanas</div>
-      <div class="amenity-card">✦ Outdoor Lounge</div>
-      <div class="amenity-card">✦ Fire Pit Courtyard</div>
-      <div class="amenity-card">✦ 24-Hour Fitness Studio</div>
-      <div class="amenity-card">✦ Yoga & Stretch Room</div>
-      <div class="amenity-card">✦ Resident Clubroom</div>
-      <div class="amenity-card">✦ Coffee Bar</div>
-      <div class="amenity-card">✦ Co-Working Lounge</div>
-      <div class="amenity-card">✦ Conference Room</div>
-      <div class="amenity-card">✦ Package Lockers</div>
-      <div class="amenity-card">✦ Pet Spa</div>
-      <div class="amenity-card">✦ Bark Park</div>
-      <div class="amenity-card">✦ Covered Parking</div>
-      <div class="amenity-card">✦ Controlled Access</div>
-      <div class="amenity-card">✦ Walking Trails</div>
-    </section>
+  <section class="hero-card">
+    <h2>Find Your Next Home</h2>
+    <p>
+      Explore thoughtfully designed studio, one-bedroom, two-bedroom, and three-bedroom
+      apartment homes. Each floor plan was created with comfort, style, and everyday
+      convenience in mind. Select your preferred home to review screening requirements
+      and begin your application.
+    </p>
+  </section>
 
-    <section class="hero-card">
-      <h2>Available Floor Plans</h2>
-      <p>Select an available apartment home to review screening requirements and begin your application.</p>
-    </section>
+  <section class="hero-card" id="amenities">
+    <h2>Resort-Inspired Amenities</h2>
+    <p>
+      Magnolia Grove was designed to feel like a private retreat. From relaxing poolside
+      spaces to work-from-home conveniences and pet-friendly features, every amenity
+      supports a polished and comfortable lifestyle.
+    </p>
+  </section>
 
-    <section class="unit-grid">
+  <section class="amenities-luxury">
+    <div>✦ Resort-Style Pool</div>
+    <div>✦ Private Cabanas</div>
+    <div>✦ Outdoor Lounge</div>
+    <div>✦ Fire Pit Courtyard</div>
+    <div>✦ Fitness Studio</div>
+    <div>✦ Yoga Room</div>
+    <div>✦ Resident Clubroom</div>
+    <div>✦ Coffee Bar</div>
+    <div>✦ Co-Working Lounge</div>
+    <div>✦ Conference Room</div>
+    <div>✦ Package Lockers</div>
+    <div>✦ Pet Spa</div>
+    <div>✦ Bark Park</div>
+    <div>✦ Covered Parking</div>
+    <div>✦ Controlled Access</div>
+    <div>✦ Walking Trails</div>
+  </section>
+
+  <section class="hero-card" id="availability">
+    <h2>Available Floor Plans</h2>
+    <p>
+      Use the filters below to narrow your search by bedroom type, monthly budget,
+      or preferred move-in date.
+    </p>
+
+    <div class="filter-bar">
+      <select>
+        <option>All Bedrooms</option>
+        <option>Studio</option>
+        <option>1 Bedroom</option>
+        <option>2 Bedrooms</option>
+        <option>3 Bedrooms</option>
+      </select>
+
+      <select>
+        <option>Any Budget</option>
+        <option>Under $1,400</option>
+        <option>Under $1,600</option>
+        <option>Under $2,000</option>
+        <option>Under $2,500</option>
+      </select>
+
+      <input type="date">
+    </div>
+  </section>
+
+  <section class="floorplan-section">
+    <h2>Studios</h2>
+    <div class="unit-grid">
 
       <div class="unit-card">
         <div class="unit-image lily"></div>
@@ -96,6 +137,13 @@
         </ul>
         <a class="apply-icon" href="screening.html?unit=The%20Tulip&rent=1350&details=Studio%20%E2%80%A2%20610%20sq.%20ft.">✦ Apply</a>
       </div>
+
+    </div>
+  </section>
+
+  <section class="floorplan-section">
+    <h2>1 Bedroom</h2>
+    <div class="unit-grid">
 
       <div class="unit-card">
         <div class="unit-image rose"></div>
@@ -145,6 +193,13 @@
         <a class="apply-icon" href="screening.html?unit=The%20Sunflower&rent=1625&details=1%20Bed%20%E2%80%A2%201%20Bath%20%E2%80%A2%20875%20sq.%20ft.">✦ Apply</a>
       </div>
 
+    </div>
+  </section>
+
+  <section class="floorplan-section">
+    <h2>2 Bedrooms</h2>
+    <div class="unit-grid">
+
       <div class="unit-card featured">
         <div class="unit-image orchid"></div>
         <div class="unit-top">
@@ -177,6 +232,13 @@
         <a class="apply-icon" href="screening.html?unit=The%20Daisy&rent=1950&details=2%20Bed%20%E2%80%A2%202%20Bath%20%E2%80%A2%201140%20sq.%20ft.">✦ Apply</a>
       </div>
 
+    </div>
+  </section>
+
+  <section class="floorplan-section">
+    <h2>3 Bedrooms</h2>
+    <div class="unit-grid">
+
       <div class="unit-card">
         <div class="unit-image magnolia"></div>
         <div class="unit-top">
@@ -193,9 +255,23 @@
         <a class="apply-icon" href="screening.html?unit=The%20Magnolia&rent=2250&details=3%20Bed%20%E2%80%A2%202%20Bath%20%E2%80%A2%201320%20sq.%20ft.">✦ Apply</a>
       </div>
 
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <section class="hero-card contact-card" id="contact">
+    <h2>Contact Magnolia Grove</h2>
+    <p><strong>Leasing Office</strong></p>
+    <p>📍 245 Magnolia Grove Parkway, Atlanta, GA 30328</p>
+    <p>📞 Call: (404) 555-2478</p>
+    <p>💬 Text: (404) 555-0198</p>
+    <p>✉ leasing@magnoliagroveapts.com</p>
+    <p><strong>Business Hours:</strong></p>
+    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+    <p>Saturday: 10:00 AM - 5:00 PM</p>
+    <p>Sunday: Closed</p>
+  </section>
+
+</main>
 
 </body>
 </html>
