@@ -411,3 +411,12 @@ textarea {
   background: #a63f6f;
   transform: translateY(-3px);
 }
+.screening-hero {
+  min-height: auto;
+  padding-bottom: 55px;
+}
+
+.disabled-link {
+  opacity: 0.5;
+  pointer-events: none;
+}
