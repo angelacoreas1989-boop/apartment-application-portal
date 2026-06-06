@@ -422,28 +422,15 @@
 
     <section class="features-section">
       <p class="eyebrow">Renters Insurance</p>
-      <h2>Required prior to move-in.</h2>
+      <h2>Required before move-in.</h2>
 
-      <div class="form-grid">
-        <div>
-          <label>Insurance Provider</label>
-          <input type="text">
-        </div>
-
-        <div>
-          <label>Policy Number</label>
-          <input type="text">
-        </div>
-
-        <div>
-          <label>Upload Proof of Insurance</label>
-          <input type="file">
-        </div>
-      </div>
+      <p>
+        Approved applicants will be required to provide proof of renters insurance before receiving keys.
+      </p>
 
       <label class="checkbox-label">
         <input type="checkbox" required>
-        I understand renters insurance is required before move-in and throughout my residency.
+        I understand renters insurance is required prior to move-in and must remain active throughout residency.
       </label>
     </section>
 
@@ -541,6 +528,10 @@
   document.getElementById("backToScreening").href =
     `screening.html?unit=${unit}&rent=${rent}&details=${details}`;
 
+  function removeEntry(button) {
+    button.closest(".added-entry").remove();
+  }
+
   function addVehicle() {
     const container = document.getElementById("vehicleContainer");
     const vehicleCount = container.querySelectorAll(".entry-group").length + 1;
@@ -567,6 +558,12 @@
       <div>
         <label>Vehicle ${vehicleCount} License Plate Number</label>
         <input type="text">
+      </div>
+
+      <div>
+        <button type="button" class="remove-action" onclick="removeEntry(this)">
+          Remove Vehicle
+        </button>
       </div>
     `;
 
@@ -623,6 +620,12 @@
       <div>
         <label>Upload Pet ${petCount} ESA / Assistance Animal Documentation</label>
         <input type="file">
+      </div>
+
+      <div>
+        <button type="button" class="remove-action" onclick="removeEntry(this)">
+          Remove Pet
+        </button>
       </div>
     `;
 
