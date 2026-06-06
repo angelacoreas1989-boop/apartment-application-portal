@@ -1,196 +1,149 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* =========================
+   NAVIGATION
+========================= */
 
-body {
-  font-family: Arial, sans-serif;
-  background: #fff7fb;
-  color: #333;
-  line-height: 1.6;
-}
-
-.site-header {
-  background: linear-gradient(135deg, #ffe4f1, #fff7fb);
-  border-bottom: 1px solid rgba(236, 72, 153, 0.2);
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.site-header h1 {
-  color: #db2777;
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
-.site-header p {
-  color: #6b7280;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.contact-info {
-  margin-top: 18px;
-  display: grid;
-  gap: 6px;
-  color: #4b5563;
-  font-size: 0.95rem;
-}
-
-.container {
-  width: 92%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 35px 0 60px;
-}
-
-.hero-card {
-  background: white;
-  border: 1px solid rgba(236, 72, 153, 0.18);
-  border-radius: 22px;
-  padding: 28px;
-  margin-bottom: 28px;
-  box-shadow: 0 12px 30px rgba(219, 39, 119, 0.08);
-}
-
-.hero-card h2 {
-  color: #db2777;
-  margin-bottom: 8px;
-}
-
-.amenities-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  margin-bottom: 28px;
-}
-
-.amenity-card {
-  background: white;
-  border: 1px solid rgba(236, 72, 153, 0.18);
-  border-radius: 18px;
-  padding: 18px;
-  text-align: center;
-  color: #db2777;
-  font-weight: 700;
-  box-shadow: 0 10px 24px rgba(219, 39, 119, 0.07);
-}
-
-.unit-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-}
-
-.unit-card {
-  background: white;
-  border: 1px solid rgba(236, 72, 153, 0.18);
-  border-radius: 22px;
-  padding: 20px;
-  box-shadow: 0 12px 28px rgba(219, 39, 119, 0.08);
-}
-
-.unit-card.featured {
-  border: 2px solid rgba(219, 39, 119, 0.45);
-}
-
-.unit-image {
-  height: 135px;
-  border-radius: 18px;
-  margin-bottom: 16px;
-  background-size: cover;
-  background-position: center;
-}
-
-.lily {
-  background: linear-gradient(135deg, #fff1f7, #fbcfe8);
-}
-
-.tulip {
-  background: linear-gradient(135deg, #ffe4e6, #fecdd3);
-}
-
-.rose {
-  background: linear-gradient(135deg, #fce7f3, #f9a8d4);
-}
-
-.lavender {
-  background: linear-gradient(135deg, #f5e8ff, #e9d5ff);
-}
-
-.sunflower {
-  background: linear-gradient(135deg, #fff7ed, #fed7aa);
-}
-
-.orchid {
-  background: linear-gradient(135deg, #fae8ff, #f0abfc);
-}
-
-.daisy {
-  background: linear-gradient(135deg, #fffbea, #fde68a);
-}
-
-.magnolia {
-  background: linear-gradient(135deg, #fdf2f8, #fbcfe8);
-}
-
-.unit-top {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.navbar h2 {
+  color: #db2777;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #6b7280;
+  margin-left: 24px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #db2777;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================
+   AMENITIES
+========================= */
+
+.amenities-luxury {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 50px;
+}
+
+.amenities-luxury div {
+  background: white;
+  border: 1px solid rgba(236,72,153,.18);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  font-weight: 700;
+  color: #db2777;
+  box-shadow: 0 10px 24px rgba(219,39,119,.06);
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.filter-bar select,
+.filter-bar input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  font-size: 15px;
+}
+
+/* =========================
+   FLOORPLAN HEADINGS
+========================= */
+
+.floorplan-section {
+  margin-bottom: 60px;
+}
+
+.floorplan-section h2 {
+  color: #db2777;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* =========================
+   APPLY BUTTON
+========================= */
+
+.apply-icon {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #ec4899;
+  color: white !important;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.apply-icon:hover {
+  background: #db2777;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-card {
+  text-align: center;
+}
+
+.contact-card p {
   margin-bottom: 8px;
 }
 
-.unit-top h3 {
-  color: #db2777;
-  font-size: 1.3rem;
-}
+/* =========================
+   MOBILE
+========================= */
 
-.unit-top span {
-  background: #fce7f3;
-  color: #be185d;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
+@media (max-width: 768px) {
 
-.unit-type {
-  color: #6b7280;
-  margin-bottom: 6px;
-}
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-.rent {
-  color: #111827;
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
+  .navbar div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.unit-card ul {
-  margin-left: 20px;
-  margin-bottom: 18px;
-  color: #4b5563;
-}
+  .navbar a {
+    margin: 5px 10px;
+  }
 
-.btn,
-button {
-  display: inline-block;
-  width: 100%;
-  background: #ec4899;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 13px 18px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.btn:hover,
-button:hover {
-  background: #db2777;
 }
