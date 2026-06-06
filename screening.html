@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screening Requirements</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <h1>✦ Screening Requirements ✦</h1>
+      <p>Review the application fees and rental criteria before continuing.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero-card">
+      <h2>Apartment Selected</h2>
+      <p><strong>Apartment:</strong> <span id="unit"></span></p>
+      <p><strong>Details:</strong> <span id="details"></span></p>
+      <p><strong>Base Rent:</strong> $<span id="rent"></span></p>
+    </section>
+
+    <section class="info-grid">
+
+      <div class="info-card">
+        <h3>Fees</h3>
+        <p><strong>$100</strong> application fee per applicant</p>
+        <p><strong>$200</strong> administrative fee per apartment home</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Income Requirement</h3>
+        <p>Household income must be at least <strong>2.5x the monthly base rent</strong>.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Approval Criteria</h3>
+        <ul>
+          <li>650+ credit score: $0 deposit</li>
+          <li>600–649 credit score: one month deposit</li>
+          <li>Prior evictions: automatic denial</li>
+          <li>Money owed to landlords: automatic denial</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Screening Consent</h3>
+        <p>Applications may include credit, background, rental history, and income verification.</p>
+      </div>
+
+    </section>
+
+    <section class="hero-card">
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        I have reviewed and understand the screening requirements, fees, and rental criteria.
+      </label>
+
+      <a id="continueBtn" class="btn">Continue to Application</a>
+    </section>
+
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const unit = params.get("unit");
+    const rent = params.get("rent");
+    const details = params.get("details");
+
+    document.getElementById("unit").textContent = unit;
+    document.getElementById("rent").textContent = rent;
+    document.getElementById("details").textContent = details;
+
+    document.getElementById("continueBtn").href =
+      `application.html?unit=${unit}&rent=${rent}&details=${details}`;
+  </script>
+
+</body>
+</html>
