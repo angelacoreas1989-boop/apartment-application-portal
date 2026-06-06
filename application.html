@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<a href="screening.html" class="back-link">← Back to Screening</a>
+<a id="backToScreening" href="screening.html" class="back-link">← Back to Screening</a>
 
 <header class="luxury-hero screening-hero">
   <section class="hero-inner">
@@ -29,6 +29,7 @@
         <p class="eyebrow">Selected Apartment Home</p>
         <h2><span id="unit"></span></h2>
       </div>
+
       <p>
         <strong>Details:</strong> <span id="details"></span><br>
         <strong>Base Rent:</strong> $<span id="rent"></span>/mo
@@ -225,7 +226,7 @@
     <section class="features-section">
       <p class="eyebrow">Rental History</p>
       <h2>Tell us about your rental history.</h2>
-      
+
       <div class="form-grid">
         <div>
           <label>Current Property Name</label>
@@ -256,26 +257,26 @@
           <label>Reason for Moving</label>
           <input type="text">
         </div>
+
+        <div>
+          <label>Have you ever been evicted?</label>
+          <select>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Do you owe money to a landlord?</label>
+          <select>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
       </div>
     </section>
 
-<div>
-  <label>Have you ever been evicted?</label>
-  <select>
-    <option>No</option>
-    <option>Yes</option>
-  </select>
-</div>
-
-<div>
-  <label>Do you owe money to a landlord?</label>
-  <select>
-    <option>No</option>
-    <option>Yes</option>
-  </select>
-</div>
-    
-       <section class="features-section">
+    <section class="features-section">
       <p class="eyebrow">Co-Applicant Information</p>
       <h2>Will another adult be applying with you?</h2>
 
@@ -287,6 +288,11 @@
       <div class="form-grid">
         <div>
           <label>Co-Applicant First Name</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Co-Applicant Middle Name</label>
           <input type="text">
         </div>
 
@@ -304,6 +310,11 @@
           <label>Co-Applicant Email</label>
           <input type="email">
         </div>
+
+        <div>
+          <label>Relationship to Applicant</label>
+          <input type="text" placeholder="Roommate, spouse, family member, etc.">
+        </div>
       </div>
     </section>
 
@@ -311,32 +322,33 @@
       <p class="eyebrow">Vehicle Information</p>
       <h2>Vehicles to be registered at Magnolia Grove.</h2>
 
-      <div class="form-grid" id="vehicleContainer">
-        <div>
-          <label>Make</label>
-          <input type="text">
-        </div>
+      <div id="vehicleContainer">
+        <div class="form-grid entry-group">
+          <div>
+            <label>Make</label>
+            <input type="text">
+          </div>
 
-        <div>
-          <label>Model</label>
-          <input type="text">
-        </div>
+          <div>
+            <label>Model</label>
+            <input type="text">
+          </div>
 
-        <div>
-          <label>Color</label>
-          <input type="text">
-        </div>
+          <div>
+            <label>Color</label>
+            <input type="text">
+          </div>
 
-        <div>
-          <label>License Plate Number</label>
-          <input type="text">
+          <div>
+            <label>License Plate Number</label>
+            <input type="text">
+          </div>
         </div>
       </div>
 
-     <button type="button" onclick="addVehicle()">
-  + Add Another Vehicle
-</button>
-      
+      <button type="button" class="secondary-action" onclick="addVehicle()">
+        + Add Another Vehicle
+      </button>
     </section>
 
     <section class="features-section">
@@ -348,56 +360,54 @@
         I will have pets residing in the apartment.
       </label>
 
-   <div class="form-grid" id="petContainer">   
+      <div id="petContainer">
+        <div class="form-grid entry-group">
+          <div>
+            <label>Pet Name</label>
+            <input type="text">
+          </div>
 
-        <div>
-          <label>Pet Name</label>
-          <input type="text">
+          <div>
+            <label>Pet Type</label>
+            <select>
+              <option>Dog</option>
+              <option>Cat</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Pet Breed</label>
+            <input type="text">
+          </div>
+
+          <div>
+            <label>Pet Age</label>
+            <input type="text">
+          </div>
+
+          <div>
+            <label>Upload Pet Photo</label>
+            <input type="file">
+          </div>
+
+          <div>
+            <label>Upload Vaccine Records</label>
+            <input type="file">
+          </div>
+
+          <div>
+            <label>Upload ESA / Assistance Animal Documentation</label>
+            <input type="file">
+          </div>
         </div>
-
-        <div>
-          <label>Pet Type</label>
-          <select>
-            <option>Dog</option>
-            <option>Cat</option>
-            <option>Other</option>
-          </select>
-        </div>
-
-        <div>
-          <label>Pet Breed</label>
-          <input type="text">
-        </div>
-
-        <div>
-          <label>Pet Age</label>
-          <input type="text">
-        </div>
-
-        <div>
-          <label>Upload Pet Photo</label>
-          <input type="file">
-        </div>
-
-        <div>
-          <label>Upload Vaccine Records</label>
-          <input type="file">
-        </div>
-
-        <div>
-          <label>Upload ESA Documentation (If Applicable)</label>
-          <input type="file">
-        </div>
-
       </div>
 
-      <button type="button" onclick="addPet()">
-  + Add Another Pet
-</button>
+      <button type="button" class="secondary-action" onclick="addPet()">
+        + Add Another Pet
+      </button>
 
-      <br><br>
-
-      <div class="feature-grid">
+      <div class="feature-grid pet-policy-grid">
         <div>Maximum 3 Pets Per Apartment Home</div>
         <div>No Breed Restrictions</div>
         <div>No Weight Restrictions</div>
@@ -405,16 +415,35 @@
         <div>$400 First Pet Fee</div>
         <div>$250 Second Pet Fee</div>
         <div>$250 Third Pet Fee</div>
+        <div>Vaccines Required</div>
+        <div>Pet Profile Required</div>
       </div>
     </section>
 
     <section class="features-section">
       <p class="eyebrow">Renters Insurance</p>
-      <h2>Required Prior To Move-In</h2>
+      <h2>Required prior to move-in.</h2>
+
+      <div class="form-grid">
+        <div>
+          <label>Insurance Provider</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Policy Number</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label>Upload Proof of Insurance</label>
+          <input type="file">
+        </div>
+      </div>
 
       <label class="checkbox-label">
         <input type="checkbox" required>
-        I understand renters insurance is required before move-in.
+        I understand renters insurance is required before move-in and throughout my residency.
       </label>
     </section>
 
@@ -434,12 +463,22 @@
 
       <label class="checkbox-label">
         <input type="checkbox" required>
-        I understand that application fees are non-refundable.
+        I understand the $100 application fee per applicant is non-refundable.
       </label>
 
       <label class="checkbox-label">
         <input type="checkbox" required>
-        I understand that prior evictions or landlord balances may result in denial.
+        I understand the $200 administrative fee applies per apartment home.
+      </label>
+
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        I understand prior evictions or landlord balances may result in denial.
+      </label>
+
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        I understand pets must remain leashed on community grounds except inside the Bark Park, and residents are responsible for picking up after pets.
       </label>
     </section>
 
@@ -471,17 +510,19 @@
     <h2>Thank You For Applying!</h2>
 
     <p>
-      Your application has been successfully submitted.
-      A member of the Magnolia Grove leasing team will review your information
-      and contact you within 24–48 hours.
+      Your application has been successfully submitted. A member of the Magnolia Grove leasing team
+      will review your information and contact you within 24–48 hours.
     </p>
 
     <br>
 
     <p>
-      If you have any questions before then, please contact our leasing office
-      at (404) 555-2478.
+      If you have any questions before then, please contact our leasing office at (404) 555-2478.
     </p>
+
+    <br>
+
+    <a href="index.html" class="primary-btn">Return Home</a>
   </section>
 
 </main>
@@ -489,109 +530,110 @@
 <script>
   const params = new URLSearchParams(window.location.search);
 
-  document.getElementById("unit").textContent =
-    params.get("unit") || "Selected Apartment";
+  const unit = params.get("unit") || "Selected Apartment";
+  const rent = params.get("rent") || "0";
+  const details = params.get("details") || "";
 
-  document.getElementById("rent").textContent =
-    params.get("rent") || "0";
+  document.getElementById("unit").textContent = unit;
+  document.getElementById("rent").textContent = rent;
+  document.getElementById("details").textContent = details;
 
-  document.getElementById("details").textContent =
-    params.get("details") || "";
+  document.getElementById("backToScreening").href =
+    `screening.html?unit=${unit}&rent=${rent}&details=${details}`;
 
-function addVehicle() {
+  function addVehicle() {
+    const container = document.getElementById("vehicleContainer");
+    const vehicleCount = container.querySelectorAll(".entry-group").length + 1;
 
-  const container =
-    document.getElementById("vehicleContainer");
+    const newVehicle = document.createElement("div");
+    newVehicle.className = "form-grid entry-group added-entry";
 
-  const newVehicle = document.createElement("div");
+    newVehicle.innerHTML = `
+      <div>
+        <label>Vehicle ${vehicleCount} Make</label>
+        <input type="text">
+      </div>
 
-  newVehicle.innerHTML = `
-    <hr style="margin:20px 0">
+      <div>
+        <label>Vehicle ${vehicleCount} Model</label>
+        <input type="text">
+      </div>
 
-    <div>
-      <label>Make</label>
-      <input type="text">
-    </div>
+      <div>
+        <label>Vehicle ${vehicleCount} Color</label>
+        <input type="text">
+      </div>
 
-    <div>
-      <label>Model</label>
-      <input type="text">
-    </div>
+      <div>
+        <label>Vehicle ${vehicleCount} License Plate Number</label>
+        <input type="text">
+      </div>
+    `;
 
-    <div>
-      <label>Color</label>
-      <input type="text">
-    </div>
+    container.appendChild(newVehicle);
+  }
 
-    <div>
-      <label>License Plate Number</label>
-      <input type="text">
-    </div>
-  `;
+  function addPet() {
+    const container = document.getElementById("petContainer");
+    const petCount = container.querySelectorAll(".entry-group").length + 1;
 
-  container.appendChild(newVehicle);
-}
+    if (petCount > 3) {
+      alert("Magnolia Grove allows a maximum of 3 pets per apartment home.");
+      return;
+    }
 
-function addPet() {
+    const newPet = document.createElement("div");
+    newPet.className = "form-grid entry-group added-entry";
 
-  const container =
-    document.getElementById("petContainer");
+    newPet.innerHTML = `
+      <div>
+        <label>Pet ${petCount} Name</label>
+        <input type="text">
+      </div>
 
-  const newPet = document.createElement("div");
+      <div>
+        <label>Pet ${petCount} Type</label>
+        <select>
+          <option>Dog</option>
+          <option>Cat</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-  newPet.innerHTML = `
-    <hr style="margin:20px 0">
+      <div>
+        <label>Pet ${petCount} Breed</label>
+        <input type="text">
+      </div>
 
-    <div>
-      <label>Pet Name</label>
-      <input type="text">
-    </div>
+      <div>
+        <label>Pet ${petCount} Age</label>
+        <input type="text">
+      </div>
 
-    <div>
-      <label>Pet Type</label>
-      <select>
-        <option>Dog</option>
-        <option>Cat</option>
-        <option>Other</option>
-      </select>
-    </div>
+      <div>
+        <label>Upload Pet ${petCount} Photo</label>
+        <input type="file">
+      </div>
 
-    <div>
-      <label>Pet Breed</label>
-      <input type="text">
-    </div>
+      <div>
+        <label>Upload Pet ${petCount} Vaccine Records</label>
+        <input type="file">
+      </div>
 
-    <div>
-      <label>Pet Age</label>
-      <input type="text">
-    </div>
+      <div>
+        <label>Upload Pet ${petCount} ESA / Assistance Animal Documentation</label>
+        <input type="file">
+      </div>
+    `;
 
-    <div>
-      <label>Upload Pet Photo</label>
-      <input type="file">
-    </div>
+    container.appendChild(newPet);
+  }
 
-    <div>
-      <label>Upload Vaccine Records</label>
-      <input type="file">
-    </div>
-
-    <div>
-      <label>Upload ESA Documentation</label>
-      <input type="file">
-    </div>
-  `;
-
-  container.appendChild(newPet);
-}
-  
   function showThankYou(event) {
     event.preventDefault();
 
     document.querySelector(".application-form").style.display = "none";
-
-    document.getElementById("thankYouMessage")
-      .classList.remove("hidden");
+    document.getElementById("thankYouMessage").classList.remove("hidden");
 
     window.scrollTo({
       top: 0,
