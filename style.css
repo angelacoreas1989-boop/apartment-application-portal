@@ -543,3 +543,66 @@ textarea {
     letter-spacing: 8px;
   }
 }
+.floorplan-visual {
+  height: 190px;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  padding: 14px;
+  background: #fffaf7;
+  border: 2px solid rgba(200, 154, 91, 0.28);
+  display: grid;
+  gap: 8px;
+}
+
+.floorplan-visual div {
+  border: 1px solid rgba(181, 82, 123, 0.28);
+  background: rgba(255, 124, 196, 0.08);
+  color: #b5527b;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+}
+
+.studio-layout {
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.studio-layout .main-room {
+  grid-row: span 2;
+}
+
+.one-bedroom-layout {
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.one-bedroom-layout .living {
+  grid-row: span 2;
+}
+
+.two-bedroom-layout {
+  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.two-bedroom-layout .living {
+  grid-column: 2;
+  grid-row: span 2;
+}
+
+.three-bedroom-layout {
+  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.three-bedroom-layout .living {
+  grid-column: 2;
+  grid-row: span 3;
+}
