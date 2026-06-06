@@ -311,7 +311,7 @@
       <p class="eyebrow">Vehicle Information</p>
       <h2>Vehicles to be registered at Magnolia Grove.</h2>
 
-      <div class="form-grid">
+      <div class="form-grid" id="vehicleContainer">
         <div>
           <label>Make</label>
           <input type="text">
@@ -333,7 +333,10 @@
         </div>
       </div>
 
-      <button type="button">+ Add Another Vehicle</button>
+     <button type="button" onclick="addVehicle()">
+  + Add Another Vehicle
+</button>
+      
     </section>
 
     <section class="features-section">
@@ -345,7 +348,7 @@
         I will have pets residing in the apartment.
       </label>
 
-      <div class="form-grid">
+   <div class="form-grid" id="petContainer">   
 
         <div>
           <label>Pet Name</label>
@@ -388,7 +391,9 @@
 
       </div>
 
-      <button type="button">+ Add Another Pet</button>
+      <button type="button" onclick="addPet()">
+  + Add Another Pet
+</button>
 
       <br><br>
 
@@ -493,6 +498,93 @@
   document.getElementById("details").textContent =
     params.get("details") || "";
 
+function addVehicle() {
+
+  const container =
+    document.getElementById("vehicleContainer");
+
+  const newVehicle = document.createElement("div");
+
+  newVehicle.innerHTML = `
+    <hr style="margin:20px 0">
+
+    <div>
+      <label>Make</label>
+      <input type="text">
+    </div>
+
+    <div>
+      <label>Model</label>
+      <input type="text">
+    </div>
+
+    <div>
+      <label>Color</label>
+      <input type="text">
+    </div>
+
+    <div>
+      <label>License Plate Number</label>
+      <input type="text">
+    </div>
+  `;
+
+  container.appendChild(newVehicle);
+}
+
+function addPet() {
+
+  const container =
+    document.getElementById("petContainer");
+
+  const newPet = document.createElement("div");
+
+  newPet.innerHTML = `
+    <hr style="margin:20px 0">
+
+    <div>
+      <label>Pet Name</label>
+      <input type="text">
+    </div>
+
+    <div>
+      <label>Pet Type</label>
+      <select>
+        <option>Dog</option>
+        <option>Cat</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Pet Breed</label>
+      <input type="text">
+    </div>
+
+    <div>
+      <label>Pet Age</label>
+      <input type="text">
+    </div>
+
+    <div>
+      <label>Upload Pet Photo</label>
+      <input type="file">
+    </div>
+
+    <div>
+      <label>Upload Vaccine Records</label>
+      <input type="file">
+    </div>
+
+    <div>
+      <label>Upload ESA Documentation</label>
+      <input type="file">
+    </div>
+  `;
+
+  container.appendChild(newPet);
+}
+  
   function showThankYou(event) {
     event.preventDefault();
 
