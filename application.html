@@ -1,104 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rental Application</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section class="hero-card">
 
-<header class="site-header">
-  <div>
-    <h1>✦ Rental Application ✦</h1>
-    <p>Complete the application below.</p>
-  </div>
-</header>
+  <h2>Apartment Information</h2>
 
-<main class="container">
+  <p><strong>Floor Plan:</strong> <span id="unit"></span></p>
+  <p><strong>Details:</strong> <span id="details"></span></p>
+  <p><strong>Base Rent:</strong> $<span id="rent"></span>/month</p>
 
-  <form class="application-form">
+</section>
 
-    <section class="hero-card">
+<section class="hero-card">
 
-      <h2>Apartment Information</h2>
+  <h2>Applicant Information</h2>
 
-      <p><strong>Apartment:</strong> <span id="unit"></span></p>
-      <p><strong>Floor Plan:</strong> <span id="details"></span></p>
-      <p><strong>Base Rent:</strong> $<span id="rent"></span></p>
+  <label>First Name</label>
+  <input type="text" required>
 
-    </section>
+  <label>Middle Name</label>
+  <input type="text">
 
-    <section class="hero-card">
+  <label>Last Name</label>
+  <input type="text" required>
 
-      <h2>Applicant Information</h2>
+  <label>Date of Birth</label>
+  <input type="date" required>
 
-      <label>First Name</label>
-      <input type="text" required>
+  <label>Email Address</label>
+  <input type="email" required>
 
-      <label>Middle Name</label>
-      <input type="text">
+  <label>Phone Number</label>
+  <input type="tel" required>
 
-      <label>Last Name</label>
-      <input type="text" required>
+</section>
 
-      <label>Date of Birth</label>
-      <input type="date" required>
+<section class="hero-card">
 
-      <label>Email Address</label>
-      <input type="email" required>
+  <h2>Identification Information</h2>
 
-      <label>Phone Number</label>
-      <input type="tel" required>
+  <label>Social Security Number</label>
+  <input type="text" placeholder="XXX-XX-XXXX">
 
-    </section>
+  <label>Tax Identification Number</label>
+  <input type="text">
 
-    <section class="hero-card">
+  <label class="checkbox-label">
+    <input type="checkbox">
+    I do not have a Social Security Number or Tax ID.
+  </label>
 
-      <h2>Identification Information</h2>
+  <label>Government Issued ID Type</label>
+  <select>
+    <option>Select ID Type</option>
+    <option>Driver's License</option>
+    <option>State Identification Card</option>
+    <option>Passport</option>
+    <option>Military ID</option>
+    <option>Permanent Resident Card</option>
+  </select>
 
-      <label>Social Security Number</label>
-      <input type="text" placeholder="XXX-XX-XXXX">
+  <label>Upload Government Issued ID</label>
+  <input type="file">
 
-      <label>Tax Identification Number</label>
-      <input type="text">
+</section>
 
-      <label class="checkbox-label">
-        <input type="checkbox">
-        I do not have a Social Security Number or Tax ID.
-      </label>
+<section class="hero-card">
 
-      <label>Government Issued ID</label>
-      <select>
-        <option>Select ID Type</option>
-        <option>Driver's License</option>
-        <option>Passport</option>
-        <option>State ID</option>
-        <option>Military ID</option>
-        <option>Permanent Resident Card</option>
-      </select>
+  <h2>Current Address</h2>
 
-      <label>Upload Identification</label>
-      <input type="file">
+  <label>Street Address</label>
+  <input type="text" required>
 
-    </section>
+  <label>Unit Number</label>
+  <input type="text">
 
-  </form>
+  <label>City</label>
+  <input type="text" required>
 
-</main>
+  <label>State</label>
+  <input type="text" required>
 
-<script>
-const params = new URLSearchParams(window.location.search);
+  <label>ZIP Code</label>
+  <input type="text" required>
 
-document.getElementById("unit").textContent =
-params.get("unit");
+</section>
 
-document.getElementById("details").textContent =
-params.get("details");
+<section class="hero-card">
 
-document.getElementById("rent").textContent =
-params.get("rent");
-</script>
+  <h2>Employment Information</h2>
 
-</body>
-</html>
+  <label>Company Name</label>
+  <input type="text" required>
+
+  <label>Employer Name</label>
+  <input type="text" required>
+
+  <label>Employer Title</label>
+  <input type="text">
+
+  <label>Employer Phone Number</label>
+  <input type="tel" required>
+
+  <label>Monthly Gross Income</label>
+  <input type="number" required>
+
+</section>
+
+<section class="hero-card">
+
+  <h2>Income Verification</h2>
+
+  <label>Verification Method</label>
+  <select required>
+    <option value="">Select Verification Method</option>
+    <option>Pay Stubs</option>
+    <option>Bank Statements</option>
+    <option>Offer Letter</option>
+    <option>Employer Verification Letter</option>
+    <option>Bank Verification Link</option>
+    <option>Employer Verification Link</option>
+  </select>
+
+  <label>Upload Proof of Income</label>
+  <input type="file" multiple>
+
+  <label>Bank Verification Link</label>
+  <input type="url" placeholder="https://">
+
+  <label>Employer Verification Link</label>
+  <input type="url" placeholder="https://">
+
+</section>
