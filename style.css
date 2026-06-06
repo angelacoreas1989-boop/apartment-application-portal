@@ -6,80 +6,191 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #0b0b0f;
-  color: white;
-  min-height: 100vh;
+  background: #fff7fb;
+  color: #333;
+  line-height: 1.6;
 }
 
-header {
+.site-header {
+  background: linear-gradient(135deg, #ffe4f1, #fff7fb);
+  border-bottom: 1px solid rgba(236, 72, 153, 0.2);
+  padding: 50px 20px;
   text-align: center;
-  padding: 40px 20px;
 }
 
-header h1 {
-  color: #ff69b4;
+.site-header h1 {
+  color: #db2777;
+  font-size: 2.4rem;
   margin-bottom: 10px;
 }
 
-header p {
-  color: #cfcfcf;
+.site-header p {
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.application-container {
-  display: flex;
-  justify-content: center;
+.contact-info {
+  margin-top: 18px;
+  display: grid;
+  gap: 6px;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.container {
+  width: 92%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 35px 0 60px;
+}
+
+.hero-card {
+  background: white;
+  border: 1px solid rgba(236, 72, 153, 0.18);
+  border-radius: 22px;
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 12px 30px rgba(219, 39, 119, 0.08);
+}
+
+.hero-card h2 {
+  color: #db2777;
+  margin-bottom: 8px;
+}
+
+.amenities-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.amenity-card {
+  background: white;
+  border: 1px solid rgba(236, 72, 153, 0.18);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  color: #db2777;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(219, 39, 119, 0.07);
+}
+
+.unit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.unit-card {
+  background: white;
+  border: 1px solid rgba(236, 72, 153, 0.18);
+  border-radius: 22px;
   padding: 20px;
+  box-shadow: 0 12px 28px rgba(219, 39, 119, 0.08);
 }
 
-.application-form {
-  width: 100%;
-  max-width: 800px;
-  background: #15151d;
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 105, 180, 0.25);
+.unit-card.featured {
+  border: 2px solid rgba(219, 39, 119, 0.45);
 }
 
-.application-form h2 {
-  color: #ff69b4;
-  margin-top: 25px;
-  margin-bottom: 15px;
+.unit-image {
+  height: 135px;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  background-size: cover;
+  background-position: center;
 }
 
-.application-form label {
-  display: block;
-  margin-top: 15px;
+.lily {
+  background: linear-gradient(135deg, #fff1f7, #fbcfe8);
+}
+
+.tulip {
+  background: linear-gradient(135deg, #ffe4e6, #fecdd3);
+}
+
+.rose {
+  background: linear-gradient(135deg, #fce7f3, #f9a8d4);
+}
+
+.lavender {
+  background: linear-gradient(135deg, #f5e8ff, #e9d5ff);
+}
+
+.sunflower {
+  background: linear-gradient(135deg, #fff7ed, #fed7aa);
+}
+
+.orchid {
+  background: linear-gradient(135deg, #fae8ff, #f0abfc);
+}
+
+.daisy {
+  background: linear-gradient(135deg, #fffbea, #fde68a);
+}
+
+.magnolia {
+  background: linear-gradient(135deg, #fdf2f8, #fbcfe8);
+}
+
+.unit-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.unit-top h3 {
+  color: #db2777;
+  font-size: 1.3rem;
+}
+
+.unit-top span {
+  background: #fce7f3;
+  color: #be185d;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.unit-type {
+  color: #6b7280;
   margin-bottom: 6px;
 }
 
-.application-form input,
-.application-form select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background: #222;
-  color: white;
+.rent {
+  color: #111827;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
 }
 
-.application-form input:focus,
-.application-form select:focus {
-  outline: none;
-  border-color: #ff69b4;
+.unit-card ul {
+  margin-left: 20px;
+  margin-bottom: 18px;
+  color: #4b5563;
 }
 
+.btn,
 button {
+  display: inline-block;
   width: 100%;
-  margin-top: 30px;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  background: #ff69b4;
+  background: #ec4899;
   color: white;
-  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 18px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
   cursor: pointer;
 }
 
+.btn:hover,
 button:hover {
-  opacity: 0.9;
+  background: #db2777;
 }
