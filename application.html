@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <h1>✦ Rental Application ✦</h1>
+    <p>Complete the application below.</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <form class="application-form">
+
+    <section class="hero-card">
+
+      <h2>Apartment Information</h2>
+
+      <p><strong>Apartment:</strong> <span id="unit"></span></p>
+      <p><strong>Floor Plan:</strong> <span id="details"></span></p>
+      <p><strong>Base Rent:</strong> $<span id="rent"></span></p>
+
+    </section>
+
+    <section class="hero-card">
+
+      <h2>Applicant Information</h2>
+
+      <label>First Name</label>
+      <input type="text" required>
+
+      <label>Middle Name</label>
+      <input type="text">
+
+      <label>Last Name</label>
+      <input type="text" required>
+
+      <label>Date of Birth</label>
+      <input type="date" required>
+
+      <label>Email Address</label>
+      <input type="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" required>
+
+    </section>
+
+    <section class="hero-card">
+
+      <h2>Identification Information</h2>
+
+      <label>Social Security Number</label>
+      <input type="text" placeholder="XXX-XX-XXXX">
+
+      <label>Tax Identification Number</label>
+      <input type="text">
+
+      <label class="checkbox-label">
+        <input type="checkbox">
+        I do not have a Social Security Number or Tax ID.
+      </label>
+
+      <label>Government Issued ID</label>
+      <select>
+        <option>Select ID Type</option>
+        <option>Driver's License</option>
+        <option>Passport</option>
+        <option>State ID</option>
+        <option>Military ID</option>
+        <option>Permanent Resident Card</option>
+      </select>
+
+      <label>Upload Identification</label>
+      <input type="file">
+
+    </section>
+
+  </form>
+
+</main>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("unit").textContent =
+params.get("unit");
+
+document.getElementById("details").textContent =
+params.get("details");
+
+document.getElementById("rent").textContent =
+params.get("rent");
+</script>
+
+</body>
+</html>
